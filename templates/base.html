@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+</head>
+<body>
+    <div class="container-fluid">
+        {% include 'header.html' %}
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Menu</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class='list-group'>
+                            <a href='/' class='list-group-item'>HOME</a>
+                            <a href='https://tpml.gov.taipei/News.aspx?n=3951678DEC0A8461&sms=9D72E82EC16F3E64' class='list-group-item'>藝文活動</a>
+                            <a href='https://tpml.gov.taipei/cp.aspx?n=1F9AED300D314011' class='list-group-item'>服務據點</a>
+                            <a href='https://www.books.com.tw/?gad_source=1&gclid=EAIaIQobChMIgOSxroWiggMVxQx7Bx3n9gq_EAAYASAAEgLfR_D_BwE' class='list-group-item'>博客來</a>
+                        </div>
+                        <br>
+                    <div class="card">
+                    <div class="card-header">
+                        <h3>館長介紹</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class='list-group2'>
+                            <a href='https://www.instagram.com/ikea_taiwan/' class='list-group-item2'>11056019 陳宜佳</a>
+                            <a href='https://dict.revised.moe.edu.tw/search.jsp?md=1&word=%E8%A8%B1%E5%AE%B8%E7%86%99&qMd=0&qCol=1' class='list-group-item'>11056020 許晨曦</a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        {% block headmessage %} 
+                        {% endblock %}
+                    </div>
+                    <div class="card-body">
+                        {% block content %} {% endblock %}
+                    </div>
+                    <div class="card-footer">
+                        {% include 'footer.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

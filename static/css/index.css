@@ -1,0 +1,66 @@
+html,body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: rgb(233, 228, 232);
+
+}
+
+.well{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+h3{
+    line-height:50px;
+    height:40px;
+    text-align:center;
+}
+  
+.container {
+    line-height:45px;
+    height:30px;
+    columns: 2;
+    text-align: center;
+}
+   
+.head{
+    line-height:32px;
+    height:40px;
+}
+
+.card-body-2{
+    text-indent:20px;
+}
+  
+.card-footer-2{
+    line-height:1px;
+    height:15px;
+    text-indent:20px;
+}
+  
+.card-footer{
+    line-height:15px;
+    height:30px;
+}
+  
+.content{
+    display: grid;
+    grid-template-columns:2fr 1fr;
+}
+  
+.img{
+    text-align:right;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:link{
+    color:rgb(56, 53, 53);
+}
+a:visited{
+    color:rgb(74, 74, 74);
+}
