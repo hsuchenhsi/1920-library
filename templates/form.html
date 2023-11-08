@@ -1,0 +1,25 @@
+
+{% extends "post.html" %}
+{% block title %}預約圖書{% endblock %}
+{% block headmessage %}
+<p style='font-family:微軟正黑體;font-size:20pt;font-weight:bold;'>預約系統</p>
+{% endblock headmessage %}
+
+{% block content %}
+<div>
+
+<form name='my form' action='/' method='GET'>
+<label for='user_id'>Your ID:</label>
+<input id='user_id' type='text' name='user_id'>
+<br>
+<br>
+<label for_'user_pass'>Your Password:</label>
+<input id='user_pass' type='password' name='user_pass'>
+<br>
+<br>
+<input type='submit' value='預約'>
+<input type='reset' value='清除重填'>
+</form>
+
+</div>
+{% endblock %}

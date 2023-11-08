@@ -3,6 +3,8 @@ from mysite.models import Post
 from django.http import HttpResponse
 from datetime import datetime
 from django.shortcuts import redirect
+from .models import Post
+from .forms import PostForm
 
 
 # Create your views here.
@@ -20,3 +22,7 @@ def showpost(request, slug):
 	except:
 		return redirect('/')
 
+def post_view(request,post_id):
+	post=Post.objects.get(id=post_id)
+	form=PostForm(instance=post)
+	return render(request,'post.html',{'post':post,'form':form})

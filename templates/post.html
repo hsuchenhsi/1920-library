@@ -16,12 +16,19 @@
         <br>
         <br>
         <br>
-        <input type='radio' name='fcolor' value='館藏中'
-        checked> 館藏中
-        <input type='radio' name='fcolor'
-        value='外借中'> 外借中
-        <input type='radio' name='fcolor'
-        value='外借中'> 預約中
+        <p>狀態: 
+            <input type="radio" id="in_library" name="booking" value="In Library" {% if form.booking == 'In Library' %}checked{% endif %}>
+            <label for="in_library">館藏中</label>
+        
+            <input type="radio" id="reserved" name="booking" value="Reserved" {% if form.booking == 'Reserved' %}checked{% endif %}>
+            <label for="reserved">預約中</label>
+
+            <input type="radio" id="on_loan" name="booking" value="On Loan" {% if form.booking == 'On Loan' %}checked{% endif %}>
+            <label for="on_loan">外借中</label>
+        </p>
+        <br>
+        <input type='button' value='立刻預約' style='background-color:f2e6e6'
+        onclick='location.href=""'>
         
 
     </div>
