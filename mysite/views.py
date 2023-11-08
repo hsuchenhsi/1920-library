@@ -11,6 +11,7 @@ def homepage(request):
     now=datetime.now()
     return render(request,'index.html',locals())
 
+
 def showpost(request, slug):
 	try:
 		post = Post.objects.get(slug = slug)
@@ -18,3 +19,4 @@ def showpost(request, slug):
 			return render(request, 'post.html', locals())
 	except:
 		return redirect('/')
+

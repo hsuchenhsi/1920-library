@@ -5,19 +5,19 @@
     <h3 style='font-family:微軟正黑體;font-size:22pt;font-weight:bold;'>本站圖書列表</h3>
 {% endblock %}
 {% block content %} 
-        <label for="fcolor" style='font-family:微軟正黑體;font-size:12pt;letter-spacing:2pt;'>分類：</label>
+<label for="fcolor" style='font-family:微軟正黑體;font-size:12pt;letter-spacing:2pt;'>分類：</label>
         <select name="fcolor" id="fcolor">
             <option value="no" selected>哈蜜瓜</option>
-            <option value="no" selected>哈哈哈</option>
-            <option value="no" selected>哈利波特</option>     
+            <option value="no" selected>格林童話</option>
+            <option value="yes" selected>哈利波特</option>   
         </select>
-        
+<h1></h1>
     <div class="row">
         {% for post in posts %}
         <div class="col-md-6">
             <div class="card">
                 <div class="content-2">    
-                    <div class='card-header-2' style='background-color:bde0fe'>
+                    <div class='card-header-2' style='background-color:f2e6e6'>
                         <div class='container'>
                             <div class='a'>
                                 <p style='font-family:微軟正黑體;font-size:14pt;color:495057;font-weight:bold;'>
@@ -35,10 +35,10 @@
                     </div>
                     <div class='card-body-2' style='font-family:微軟正黑體;font-size:12pt;color:495057;' >
                         <p>
-                            {{ post.body | truncatechars:25 }}
+                            {{ post.body | truncatechars:29 }}
                         </p>
                     </div>
-                    <div class='card-footer-3' style='background-color:bde0fe'>
+                    <div class='card-footer-3'>
                         <hr>
                         <div class='card-footer-2' style='font-family:微軟正黑體;font-size:10pt;color:495057'>
                             <p>
