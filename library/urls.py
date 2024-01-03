@@ -17,13 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include,path
 from mysite.views import homepage,showpost
-from mysite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
     path('post/<slug:slug>/', showpost),
-    path('', views.index, name='Index'),
-    path('register', views.sign_up, name='Register'),
-    path('register/', views.custom_register, name='custom_register'),
+
 ]
