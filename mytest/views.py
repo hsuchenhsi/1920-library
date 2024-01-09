@@ -5,6 +5,7 @@ from mytest.forms import ContactForm, \
                         UserRegisterForm, \
                         LoginForm, \
                         ProfileForm
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -152,3 +153,9 @@ def profile(request):
         message = "ERROR"
         print('出錯回首頁')
         redirect("/")
+
+
+
+
+
+

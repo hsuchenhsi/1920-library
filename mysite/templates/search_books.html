@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>搜尋書籍</h2>
+
+  <form method="get" action="{% url 'search_books' %}">
+    <label for="search">請輸入欲查詢的笨東西：</label>
+    <input type="text" id="search" name="q" value="{{ query }}">
+    <button type="submit">搜尋</button>
+  </form>
+
+  <!-- search_books.html -->
+{% if books %}
+<ul>
+  {% for book in books %}
+    <li>
+      <a href="/post/HarryPotter-1">{{ book.title }}</a> by {{ book.author }}
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>找不到符合條件的書籍。</p>
+{% endif %}
+
+{% endblock %}
+
+

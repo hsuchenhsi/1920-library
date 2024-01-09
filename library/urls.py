@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from mysite import views as mv
 from mytest import views as testv
+from mysite.views import search_books,post_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,16 @@ urlpatterns = [
     path('post2db/', testv.post2db),
     path('register/', testv.register),
     path('login/', testv.login, name='login'),
-    path('profile/', testv.profile)
+    path('profile/', testv.profile),
+    path('search/', search_books, name='search_books'),
+    path('post/<slug:slug>/', post_view, name='post_detail'),
 ]
+
+
+
+
+
+
+
+
 

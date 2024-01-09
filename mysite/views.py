@@ -1,12 +1,10 @@
 from mysite.models import Post
 from django.http import HttpResponse
 from datetime import datetime
-from django.shortcuts import redirect
 from .models import Post
 from .forms import PostForm
-from django.shortcuts import render, redirect
-
-
+from django.shortcuts import render, redirect, get_object_or_404
+from django.db.models import Q
 
 # Create your views here.
 def homepage(request):
@@ -31,3 +29,8 @@ def post_view(request,post_id):
 def index(request):
     return render(request, 'index.html')
 
+
+def search_books(request):
+    query = request.GET.get('q', '')  
+    books = Post.objects.filter(Q(title__icontains=query) | Q(author__icontains=query) | Q(body__icontains=query))
+    return render(request, 'search_books.html', {'books': books, 'query': query})
