@@ -17,6 +17,8 @@
         <br>
         <br>
         <p>狀態: 
+            <!--  <input type='radio' name='in_library' value='{{ m.booking }}'>{{ m.booking }}</input>  -->
+
             <input type="radio" id="in_library" name="booking" value="In Library" {% if form.booking == 'In Library' %}checked{% endif %}>
             <label for="in_library">館藏中</label>
         
@@ -28,7 +30,7 @@
         </p>
         <br>
         <input type='button' value='立刻預約' style='background-color:f2e6e6'
-        onclick='location.href="/form"'>
+        onclick='location.href="/login"'>
 
         
 

@@ -110,12 +110,12 @@ def login(request):
                 if user.is_active:
                     auth.login(request, user)
                     print("success")
-                    message = '成功登入了'
-                    return redirect('/')
+                    message = '成功預約:哈利波特－神秘的魔法石'
                 else:
                     message = '帳號尚未啟用'
+                    return render(request, 'register.html', locals())
             else:
-                message = '登入失敗'
+                message = '預約失敗'
 
         return render(request, 'login.html', locals())
     else:

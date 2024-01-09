@@ -20,12 +20,12 @@ from mysite import views as mv
 from mytest import views as testv
 from mysite.views import search_books,post_view
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mv.homepage, name="homepage"),
     path('post/<slug:slug>/', mv.showpost, name="showpost"),
     path('post/', mv.post_view, name="post_view"),
-    # path('post/', mv.post_form),
     path('test/', testv.index, name="test-new"),
     path('test/delpost/<int:pid>/', testv.delpost),
     path('test/contact', testv.contact),
@@ -35,6 +35,9 @@ urlpatterns = [
     path('profile/', testv.profile),
     path('search/', search_books, name='search_books'),
     path('post/<slug:slug>/', post_view, name='post_detail'),
+    path('test/', testv.index, name="test-new"),
+    path('test/delpost/<int:pid>/', testv.delpost),
+    path('test/contact', testv.contact),
 ]
 
 
