@@ -25,6 +25,7 @@ urlpatterns = [
     path('', mv.homepage, name="homepage"),
     path('post/<slug:slug>/', mv.showpost, name="showpost"),
     path('post/', mv.post_view, name="post_view"),
+    # path('post/', mv.post_form),
     path('test/', testv.index, name="test-new"),
     path('test/delpost/<int:pid>/', testv.delpost),
     path('test/contact', testv.contact),
