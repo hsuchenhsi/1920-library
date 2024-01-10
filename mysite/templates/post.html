@@ -17,15 +17,15 @@
         <br>
         <br>
         <p>狀態: 
-            <!--  <input type='radio' name='in_library' value='{{ m.booking }}'>{{ m.booking }}</input>  -->
+            <!-- <input type='radio' name='in_library' value='{{ m.booking }}'>{{ m.booking }}</input> -->
 
-            <input type="radio" id="in_library" name="booking" value="In Library" {% if form.booking == 'In Library' %}checked{% endif %}>
-            <label for="in_library">館藏中</label>
+            <input type="radio" id="in_library" name="booking" value="In Library"checked>
+            館藏中
         
-            <input type="radio" id="reserved" name="booking" value="Reserved" {% if form.booking == 'Reserved' %}checked{% endif %}>
+            <input type="radio" id="reserved" name="booking" value="Reserved" {% if form.booking == 'Reserved' %}{% endif %}>
             <label for="reserved">預約中</label>
 
-            <input type="radio" id="on_loan" name="booking" value="On Loan" {% if form.booking == 'On Loan' %}checked{% endif %}>
+            <input type="radio" id="on_loan" name="booking" value="On Loan" {% if form.booking == 'On Loan' %}{% endif %}>
             <label for="on_loan">外借中</label>
         </p>
         <br>

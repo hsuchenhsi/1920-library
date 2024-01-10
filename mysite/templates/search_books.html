@@ -4,7 +4,7 @@
   <h2>搜尋書籍</h2>
 
   <form method="get" action="{% url 'search_books' %}">
-    <label for="search">請輸入欲查詢的笨東西：</label>
+    <label for="search">請輸入欲查詢的書籍相關字詞：  </label>
     <input type="text" id="search" name="q" value="{{ query }}">
     <button type="submit">搜尋</button>
   </form>
