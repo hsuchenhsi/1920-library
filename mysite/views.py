@@ -5,6 +5,8 @@ from .models import Post
 from .forms import PostForm
 from django.shortcuts import render, redirect
 from django.db.models import Q
+from django.db.models import Q
+
 
 # Create your views here.
 def homepage(request):
@@ -29,6 +31,28 @@ def post_view(request,post_id):
 def index(request):
     return render(request, 'index.html')
 
+'''
+def booking(request):
+    if request.method == 'GET':
+        # form = UserRegisterForm()
+        return render(request, 'register.html', locals())
+    elif request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user_name = form.cleaned_data['user_name']
+            user_email = form.cleaned_data['user_email']
+            user_password = form.cleaned_data['user_password']
+            user_password_confirm = form.cleaned_data['user_password_confirm']
+            if user_password == user_password_confirm:
+                user = user.objects.create_user(user_name, user_email, user_password)
+                message = f'註冊成功！'
+            else:
+                message = f'兩次密碼不一致！'    
+        return render(request, 'register.html', locals())
+    else:
+        message = "ERROR"
+        return render(request, 'register.html', locals())
+'''
 
 def search_books(request):
     query = request.GET.get('q', '')  
@@ -37,3 +61,5 @@ def search_books(request):
 
 def login_view(request):
 	return render(request,'login.html')
+
+

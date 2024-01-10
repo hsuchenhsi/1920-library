@@ -42,4 +42,3 @@ class Post2(models.Model):
         return self.title
 
         
-

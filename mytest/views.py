@@ -110,7 +110,7 @@ def login(request):
                 if user.is_active:
                     auth.login(request, user)
                     print("success")
-                    message = '成功預約:哈利波特－神秘的魔法石'
+                    message = '成功預約: 哈利波特－神秘的魔法石'
                 else:
                     message = '帳號尚未啟用'
                     return render(request, 'register.html', locals())

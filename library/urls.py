@@ -38,6 +38,7 @@ urlpatterns = [
     path('test/', testv.index, name="test-new"),
     path('test/delpost/<int:pid>/', testv.delpost),
     path('test/contact', testv.contact),
+    # path('booking/',mv.booking,name="booking"),
 ]
 
 
